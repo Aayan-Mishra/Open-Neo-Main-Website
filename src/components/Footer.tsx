@@ -90,7 +90,7 @@ export default function Footer() {
 
             {/* Status Indicator */}
             <a 
-              href="/status"  // or your status page URL
+              href="https://odysseylabs.statuspage.io/"  // or your status page URL
               className="mt-4 flex items-center justify-center space-x-2 bg-white/5 border border-white/10 rounded-full px-4 py-2 hover:bg-white/10 transition-colors cursor-pointer"
             >
               <div className="relative">
