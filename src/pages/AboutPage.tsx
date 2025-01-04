@@ -5,7 +5,7 @@ const milestones = [
   {
     date: 'October 2024',
     title: 'OdysseyXL was born',
-    description: 'Belive it or not but OdysseyXL was a small personal project!'
+    description: 'Believe it or not but OdysseyXL was a small personal project!'
   },
   {
     date: 'January 2025',
