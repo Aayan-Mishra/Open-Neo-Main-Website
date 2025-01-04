@@ -40,7 +40,7 @@ export default function ProjectsPage() {
                 key={index}
                 className="group relative overflow-hidden rounded-2xl bg-black/30 border border-white/10 p-8 transition-all duration-300 hover:bg-black/40 hover:border-blue-500/50"
               >
-                <div className="flex items-center gap-4 mb-6">
+                <div className="flex items-center gap-4 mb-6 relative z-20">
                   <div className="p-3 rounded-xl bg-white/5 backdrop-blur-sm">
                     {project.icon}
                   </div>
@@ -61,7 +61,8 @@ export default function ProjectsPage() {
                           href={project.demoUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+                          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors relative z-20"
+                          onClick={(e) => e.stopPropagation()}
                         >
                           Try Demo
                           <ExternalLink className="h-4 w-4" />
@@ -70,7 +71,7 @@ export default function ProjectsPage() {
                     </div>
                   </div>
                 </div>
-                <p className="text-gray-300 text-lg leading-relaxed mb-6">{project.description}</p>
+                <p className="text-gray-300 text-lg leading-relaxed mb-6 relative z-20">{project.description}</p>
                 
                 <a
                   href={project.link}
@@ -81,7 +82,7 @@ export default function ProjectsPage() {
                 </a>
                 
                 {/* Project Images */}
-                <div className="grid grid-cols-3 gap-4">
+                <div className="grid grid-cols-3 gap-4 relative z-20">
                   {project.images.map((image, imageIndex) => (
                     <div 
                       key={imageIndex} 
