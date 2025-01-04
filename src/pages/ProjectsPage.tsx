@@ -21,6 +21,7 @@ const projects = [
     description: 'Advanced language model pushing the boundaries of natural language understanding.',
     status: 'Active',
     link: '/projects/hercules',
+    demoUrl: 'https://odyssey-labs-hercules-3-1b.hf.space',
     images: []
   },
 ];
