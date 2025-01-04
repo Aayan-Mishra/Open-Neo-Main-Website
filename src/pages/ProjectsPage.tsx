@@ -23,6 +23,8 @@ const projects = [
     status: 'Active',
     link: '/projects/hercules',
     demoUrl: 'https://odyssey-labs-hercules-3-1b.hf.space',
+    imageLayout: 'grid',
+    images: []
   },
 ];
 
