@@ -62,7 +62,7 @@ const teamMembers = [
     social: {
       github: 'https://github.com/Aayan-Mishra',
     },
-    hoverEffect: 'hover:scale-105 hover:rotate-1 hover:shadow-xl hover:shadow-red-500/20'
+    hoverEffect: 'hover:scale-105 hover:rotate-1 hover:shadow-xl hover:shadow-red-500/40'
   },
   {
     name: 'Adversing',
@@ -72,7 +72,7 @@ const teamMembers = [
     social: {
       github: 'https://github.com/Adversing',
     },
-    hoverEffect: 'hover:-translate-y-2 hover:shadow-lg hover:shadow-blue-500/20'
+    hoverEffect: 'hover:-translate-y-2 hover:shadow-lg hover:shadow-blue-500/40'
   },
   {
     name: 'macintosh',
@@ -82,7 +82,7 @@ const teamMembers = [
     social: {
       github: 'https://github.com/maciint0sh',
     },
-    hoverEffect: 'hover:scale-[1.02] hover:-rotate-1 hover:shadow-lg hover:shadow-cyan-500/20'
+    hoverEffect: 'hover:scale-[1.02] hover:-rotate-1 hover:shadow-lg hover:shadow-cyan-500/40'
   },
   {
     name: 'Ramo',
@@ -90,7 +90,7 @@ const teamMembers = [
     image: '/team/8fb0619308eb4976aec5f371ba691f8a.png',
     bio: 'Ramo is a creative director with a passion for creating innovative AI models.',
     social: {},
-    hoverEffect: 'hover:translate-x-1 hover:-translate-y-1 hover:shadow-lg hover:shadow-green-500/20'
+    hoverEffect: 'hover:translate-x-1 hover:-translate-y-1 hover:shadow-lg hover:shadow-green-500/40'
   },
   {
     name: 'Specter',
@@ -100,7 +100,7 @@ const teamMembers = [
     social: {
       github: 'https://github.com/Aby-ss',
     },
-    hoverEffect: 'hover:scale-105 hover:shadow-lg hover:shadow-rose-500/20'
+    hoverEffect: 'hover:scale-105 hover:shadow-lg hover:shadow-rose-500/40'
   },
   {
     name: 'Dark25',
@@ -110,7 +110,7 @@ const teamMembers = [
     social: {
       github: 'https://github.com/ruben-david-roy',
     },
-    hoverEffect: 'hover:-translate-y-1 hover:translate-x-1 hover:shadow-lg hover:shadow-purple-500/20'
+    hoverEffect: 'hover:-translate-y-1 hover:translate-x-1 hover:shadow-lg hover:shadow-purple-500/40'
   }
 ];
 
