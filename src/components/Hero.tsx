@@ -1,87 +1,92 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import React, { useRef, useEffect } from 'react';
+import Button from './ui/Button';
 
-const navigation = [
-  { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
-  { name: 'Projects', href: '/projects' },
-  { name: 'Research', href: '/research' },
-  { name: 'Contact', href: '/contact' }
-];
-
-export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const [visible, setVisible] = useState(true);
+export default function Hero() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const videoSources = [
+    'public/VIDEO/1.mp4',
+    'public/VIDEO/2.mp4',
+    'public/VIDEO/3.mp4',
+    'public/VIDEO/4.mp4',
+    'public/VIDEO/5.mp4',
+    'public/VIDEO/6.mp4',
+  ];
 
   useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollPos = window.scrollY;
-      
-      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
-      setPrevScrollPos(currentScrollPos);
+    const videoElement = videoRef.current;
+    let currentVideoIndex = 0;
+
+    const handleVideoEnd = () => {
+      currentVideoIndex = (currentVideoIndex + 1) % videoSources.length;
+      if (videoElement) {
+        videoElement.src = videoSources[currentVideoIndex];
+        videoElement.play();
+      }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [prevScrollPos]);
+    if (videoElement) {
+      videoElement.addEventListener('ended', handleVideoEnd);
+    }
+
+    return () => {
+      if (videoElement) {
+        videoElement.removeEventListener('ended', handleVideoEnd);
+      }
+    };
+  }, [videoSources]);
 
   return (
-    <nav className={`fixed w-full top-0 z-50 bg-transparent transition-transform duration-300 ${
-      visible ? 'translate-y-0' : '-translate-y-full'
-    }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex-shrink-0">
-            <a href="/" className="text-white font-bold text-xl">
-              Odyssey Labs
-            </a>
-          </div>
+    <div className="relative min-h-screen flex items-center">
+      {/* Background with video */}
+      <div className="absolute inset-0 overflow-hidden">
+        <video
+          ref={videoRef}
+          className="w-full h-full object-cover scale-110"
+          autoPlay
+          muted
+          playsInline
+        >
+          <source src={videoSources[0]} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="absolute inset-0 bg-black/70"></div>
+      </div>
 
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-center space-x-4">
-              {navigation.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
-                >
-                  {item.name}
-                </a>
-              ))}
-            </div>
-          </div>
-
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-black/20 focus:outline-none"
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="space-y-8">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+            Revolutionizing the{' '}
+            <span className="animate-gradient bg-gradient-to-r from-red-500 via-yellow-500 via-green-500 via-blue-500 via-indigo-500 to-purple-500 bg-[size:200%] text-transparent bg-clip-text">
+              Future of AI
+            </span>
+          </h1>
+          
+          <p className="text-xl text-gray-300 max-w-2xl">
+            Pushing the boundaries of artificial intelligence through groundbreaking research and innovative solutions.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Button 
+              href="/projects" 
+              variant="primary" 
+              icon
+              className="transform transition-transform duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/50"
             >
-              {isOpen ? (
-                <X className="block h-6 w-6" />
-              ) : (
-                <Menu className="block h-6 w-6" />
-              )}
-            </button>
+              Explore Projects
+            </Button>
+            <Button 
+              href="/contact" 
+              variant="secondary"
+              className="transform transition-transform duration-300 hover:scale-105 hover:shadow-lg hover:shadow-indigo-500/50"
+            >
+              Contact Us
+            </Button>
           </div>
         </div>
       </div>
-
-      {isOpen && (
-        <div className="md:hidden bg-black/80 backdrop-blur-sm">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {navigation.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors"
-              >
-                {item.name}
-              </a>
-            ))}
-          </div>
-        </div>
-      )}
-    </nav>
+      <p className="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-sm text-gray-400 z-20">
+        Images by OdysseyXL. Videos generated by Mochi 1.
+      </p>
+    </div>
   );
 }
