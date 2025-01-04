@@ -9,7 +9,7 @@ const papers = [
     conference: 'Diffusion Models',
     abstract: 'This paper presents OdysseyXL, a novel approach to text-to-image generation...',
     link: 'https://huggingface.co/collections/odyssey-labs/odysseyxl-677615b1f9117ef6f9fd979e',
-    image: 'public/projects/odyssey/odysseyxl.png'
+    image: '/projects/odyssey/odysseyxl.png'
   },
   {
     title: 'Hercules-3: A New Era of Text Generation',
@@ -18,7 +18,7 @@ const papers = [
     conference: 'Transformer Models',
     abstract: 'This paper presents Hercules-3, a new generation of text generation models...',
     link: 'https://huggingface.co/collections/odyssey-labs/hercules-3-67761653999dab7ca23c7981',
-    image: 'public/projects/hercules/Hercules-3.png'
+    image: '/projects/hercules/Hercules-3.png'
   }
 ];
 
