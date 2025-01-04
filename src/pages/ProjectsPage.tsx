@@ -3,12 +3,13 @@ import { Brain, Image, MessageSquare, Cpu, ExternalLink } from 'lucide-react';
 
 const projects = [
   {
-    icon: <Image className="h-8 w-8 text-blue-500" />,
+    icon: <Image className="h-12 w-12 text-blue-500" />,
     name: 'OdysseyXL',
     description: 'State-of-the-art text-to-image generation model with unprecedented quality and control.',
     status: 'Active',
     link: '/projects/odysseyxl',
     demoUrl: 'https://john6666-votepurchase-multiple-model.hf.space',
+    imageLayout: 'grid',
     images: [
       '/projects/odyssey/1.png',
       '/projects/odyssey/2.webp',
@@ -16,22 +17,23 @@ const projects = [
     ]
   },
   {
-    icon: <Brain className="h-8 w-8 text-purple-500" />,
+    icon: <Brain className="h-12 w-12 text-purple-500" />,
     name: 'Hercules-3',
     description: 'Advanced language model pushing the boundaries of natural language understanding.',
     status: 'Active',
     link: '/projects/hercules',
     demoUrl: 'https://odyssey-labs-hercules-3-1b.hf.space',
-    images: []
+    imageLayout: 'single',
+    images: ['/projects/hercules/Hercules-3.png']
   },
 ];
 
 export default function ProjectsPage() {
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen pt-20 bg-black">
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-5xl font-bold mb-8 text-center">Our Projects</h1>
+          <h1 className="text-5xl font-bold mb-8 text-center text-white">Our Projects</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto text-center mb-16">
             Exploring the frontiers of artificial intelligence through innovative research and development.
           </p>
@@ -39,64 +41,71 @@ export default function ProjectsPage() {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="group relative overflow-hidden rounded-2xl bg-black/30 border border-white/10 p-8 transition-all duration-300 hover:bg-black/40 hover:border-blue-500/50"
+                className="group relative rounded-3xl bg-[#111111] p-8"
               >
-                <div className="flex items-center gap-4 mb-6 relative z-20">
-                  <div className="p-3 rounded-xl bg-white/5 backdrop-blur-sm">
+                <div className="flex items-start gap-4 mb-8">
+                  <div className="p-4 rounded-2xl bg-black">
                     {project.icon}
                   </div>
                   <div className="flex-grow">
-                    <h3 className="text-2xl font-bold text-white mb-1 group-hover:text-blue-400 transition-colors">
+                    <h3 className="text-4xl font-bold text-white mb-3">
                       {project.name}
                     </h3>
-                    <div className="flex items-center gap-3">
-                      <span className={`text-sm px-3 py-1 rounded-full ${
-                        project.status === 'Active' ? 'bg-green-500/20 text-green-400' :
-                        project.status === 'In Development' ? 'bg-yellow-500/20 text-yellow-400' :
-                        'bg-blue-500/20 text-blue-400'
-                      }`}>
-                        {project.status}
-                      </span>
-                      {project.demoUrl && (
-                        <a
-                          href={project.demoUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors relative z-20"
-                          onClick={(e) => e.stopPropagation()}
-                        >
-                          Try Demo
-                          <ExternalLink className="h-4 w-4" />
-                        </a>
-                      )}
-                    </div>
+                    <span className={`text-sm px-6 py-2 rounded-full inline-block ${
+                      project.status === 'Active' ? 'bg-green-900/50 text-green-400' :
+                      'bg-blue-900/50 text-blue-400'
+                    }`}>
+                      {project.status}
+                    </span>
                   </div>
                 </div>
-                <p className="text-gray-300 text-lg leading-relaxed mb-6 relative z-20">{project.description}</p>
+                <p className="text-gray-300 text-xl leading-relaxed mb-8">{project.description}</p>
                 
-                <a
-                  href={project.link}
-                  className="absolute inset-0 z-10"
-                  aria-label={`Learn more about ${project.name}`}
-                >
-                  <span className="sr-only">Learn more about {project.name}</span>
-                </a>
+                <div className="flex gap-4 mb-8">
+                  <a
+                    href={project.link}
+                    className="inline-flex items-center px-6 py-3 rounded-xl bg-black text-white text-lg hover:bg-black/70 transition-colors"
+                  >
+                    Learn More
+                  </a>
+                  {project.demoUrl && (
+                    <a
+                      href={project.demoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 text-white text-lg hover:bg-blue-700 transition-colors"
+                    >
+                      Try Demo
+                      <ExternalLink className="h-5 w-5" />
+                    </a>
+                  )}
+                </div>
                 
                 {/* Project Images */}
-                <div className="grid grid-cols-3 gap-4 relative z-20">
-                  {project.images.map((image, imageIndex) => (
-                    <div 
-                      key={imageIndex} 
-                      className="aspect-square rounded-lg overflow-hidden"
-                    >
-                      <img 
-                        src={image} 
-                        alt={`${project.name} preview ${imageIndex + 1}`}
-                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                      />
-                    </div>
-                  ))}
-                </div>
+                {project.imageLayout === 'grid' ? (
+                  <div className="grid grid-cols-3 gap-4">
+                    {project.images.map((image, imageIndex) => (
+                      <div 
+                        key={imageIndex} 
+                        className="aspect-square rounded-2xl overflow-hidden"
+                      >
+                        <img 
+                          src={image} 
+                          alt={`${project.name} preview ${imageIndex + 1}`}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="rounded-2xl overflow-hidden h-[500px]">
+                    <img 
+                      src={project.images[0]} 
+                      alt={`${project.name} preview`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                )}
               </div>
             ))}
           </div>
