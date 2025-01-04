@@ -4,12 +4,12 @@ import Button from './ui/Button';
 export default function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const videoSources = [
-    'public/VIDEO/1.mp4',
-    'public/VIDEO/2.mp4',
-    'public/VIDEO/3.mp4',
-    'public/VIDEO/4.mp4',
-    'public/VIDEO/5.mp4',
-    'public/VIDEO/6.mp4',
+    '/public/VIDEO/1.mp4',
+    '/public/VIDEO/2.mp4',
+    '/public/VIDEO/3.mp4',
+    '/public/VIDEO/4.mp4',
+    '/public/VIDEO/5.mp4',
+    '/public/VIDEO/6.mp4',
   ];
 
   useEffect(() => {
