@@ -57,7 +57,7 @@ const teamMembers = [
   {
     name: 'Spestly',
     role: 'Diffusion Model Engineer',
-    image: '/team/spestly-ody.png',
+    image: './team/spestly-ody.png',
     bio: 'Spestly is a deep learning engineer with a passion for creating cutting-edge AI models.',
     social: {
       github: 'https://github.com/Aayan-Mishra',
@@ -67,7 +67,7 @@ const teamMembers = [
   {
     name: 'Adversing',
     role: 'Deep Learning Engineer',
-    image: 'team/60707212.jpeg',
+    image: './team/60707212.jpeg',
     bio: 'Adversing is a deep learning engineer with a passion for creating cutting-edge AI models.',
     social: {
       github: 'https://github.com/Adversing',
@@ -77,7 +77,7 @@ const teamMembers = [
   {
     name: 'macintosh',
     role: 'Machine Learning Engineer',
-    image: 'team/191959356.png',
+    image: './team/191959356.png',
     bio: 'macintosh is a machine learning engineer with a passion for creating cutting-edge AI models.',
     social: {
       github: 'https://github.com/maciint0sh',
@@ -87,7 +87,7 @@ const teamMembers = [
   {
     name: 'Ramo',
     role: 'Creative Director',
-    image: 'team/8fb0619308eb4976aec5f371ba691f8a.png',
+    image: './team/8fb0619308eb4976aec5f371ba691f8a.png',
     bio: 'Ramo is a creative director with a passion for creating innovative AI models.',
     social: {},
     hoverEffect: 'hover:translate-x-1 hover:-translate-y-1 hover:shadow-lg hover:shadow-green-500/20'
@@ -95,7 +95,7 @@ const teamMembers = [
   {
     name: 'Specter',
     role: 'Data Scientist',
-    image: 'team/103417697.jpeg',
+    image: './team/103417697.jpeg',
     bio: 'Specter is a data scientist with a passion for creating innovative AI models.',
     social: {
       github: 'https://github.com/Aby-ss',
@@ -105,7 +105,7 @@ const teamMembers = [
   {
     name: 'Dark25',
     role: 'External Research Engineer',
-    image: 'team/69cee180fb158434697982c71fa4ea0a.png',
+    image: './team/69cee180fb158434697982c71fa4ea0a.png',
     bio: 'Dark25 has a passion for creating innovative AI models.',
     social: {
       github: 'https://github.com/ruben-david-roy',
