@@ -10,6 +10,7 @@ export default function Hero() {
     '/VIDEO/4.mp4',
     '/VIDEO/5.mp4',
     '/VIDEO/6.mp4',
+    '/VIDEO/7.mp4',
   ];
 
   useEffect(() => {
