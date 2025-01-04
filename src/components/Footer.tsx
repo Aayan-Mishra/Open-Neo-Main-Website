@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Github, Twitter, Linkedin, Mail } from 'lucide-react';
+import { Github, Twitter, Mail, Monitor, CheckCircle } from 'lucide-react';
 
 export default function Footer() {
   const [showMessage, setShowMessage] = useState(false);
@@ -56,6 +56,14 @@ export default function Footer() {
               >
                 <Mail className="h-5 w-5" />
               </a>
+              <a 
+                href="https://odysseylabs.statuspage.io/"
+                className="text-gray-400 hover:text-white"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Monitor className="h-5 w-5" />
+              </a>
             </div>
           </div>
           
@@ -79,6 +87,18 @@ export default function Footer() {
                 </p>
               )}
             </form>
+
+            {/* Status Indicator */}
+            <a 
+              href="/status"  // or your status page URL
+              className="mt-4 flex items-center justify-center space-x-2 bg-white/5 border border-white/10 rounded-full px-4 py-2 hover:bg-white/10 transition-colors cursor-pointer"
+            >
+              <div className="relative">
+                <div className="h-2 w-2 rounded-full bg-green-500"></div>
+                <div className="absolute inset-0 h-2 w-2 rounded-full bg-green-500 animate-ping"></div>
+              </div>
+              <span className="text-gray-300 text-sm">All systems operational</span>
+            </a>
           </div>
         </div>
         
