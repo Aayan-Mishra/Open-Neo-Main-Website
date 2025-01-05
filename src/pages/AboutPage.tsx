@@ -87,7 +87,7 @@ const teamMembers = [
   {
     name: 'Ramo',
     role: 'Creative Director',
-    image: '/team/ramo.png',
+    image: '/team/8fb0619308eb4976aec5f371ba691f8a.png',
     bio: 'Ramo is a creative director with a passion for creating innovative AI models.',
     social: {
       github: 'https://github.com/iRamo65',
