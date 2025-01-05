@@ -87,10 +87,10 @@ const teamMembers = [
   {
     name: 'Ramo',
     role: 'Creative Director',
-    image: '/team/8fb0619308eb4976aec5f371ba691f8a.png',
+    image: '/team/ramo.png',
     bio: 'Ramo is a creative director with a passion for creating innovative AI models.',
     social: {
-      github: 'https://github.com/iRamo65';
+      github: 'https://github.com/iRamo65',
     },
     hoverEffect: 'hover:translate-x-1 hover:-translate-y-1 hover:shadow-lg hover:shadow-green-500/40'
   },
