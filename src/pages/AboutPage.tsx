@@ -113,7 +113,15 @@ const teamMembers = [
       github: 'https://github.com/ruben-david-roy',
     },
     hoverEffect: 'hover:-translate-y-1 hover:translate-x-1 hover:shadow-lg hover:shadow-purple-500/40'
-  }
+  },
+   {
+    name: 'Kazex',
+    role: 'Media Director',
+    image: '/team/Kazex.jpg',
+    bio: 'Kazex has a passion for creating innovative AI models.',
+    social: {},
+    hoverEffect: 'hover:scale-105 hover:rotate-1 hover:shadow-xl hover:shadow-cyan-500/40'
+  },
 ];
 
 export default function AboutPage() {
