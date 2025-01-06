@@ -8,7 +8,7 @@ const papers = [
     date: 'Jan 2025',
     conference: 'News',
     abstract: 'Today, we are thrilled to announce the launch of Odyssey Labs. As a key contributor to the generative AI research community, our mission is to pioneer and refine state-of-the-art generative deep learning models for media, including images and videos, and to push the boundaries of creativity, efficiency, and diversity. We believe that generative AI will…',
-    link: 'https://odyssey-labs-docs.vercel.app/blog/odyssey-labs-launch',
+    link: 'https://odyssey-labs-docs.vercel.app/blog/odyssey-labs',
     image: 'https://raw.githubusercontent.com/Odyssey-Labs-AI/Media/refs/heads/main/odysseylabsfix.png'
   },
 ];
