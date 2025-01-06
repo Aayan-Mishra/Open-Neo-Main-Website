@@ -87,7 +87,7 @@ const teamMembers = [
   {
     name: 'Ramo',
     role: 'Creative Director',
-    image: '/team/8fb0619308eb4976aec5f371ba691f8a.png',
+    image: 'https://raw.githubusercontent.com/Odyssey-Labs-AI/Odyssey-Labs-Main-Website/refs/heads/main/team/ramo.png?token=GHSAT0AAAAAACYJHYF5UTZXC3K5IHUEB3TEZ334LHQ',
     bio: 'Ramo is a creative director with a passion for creating innovative AI models.',
     social: {
       github: 'https://github.com/iRamo65',
@@ -105,14 +105,6 @@ const teamMembers = [
     hoverEffect: 'hover:scale-105 hover:shadow-lg hover:shadow-rose-500/40'
   },
   {
-    name: 'Kazex',
-    role: 'Media Director',
-    image: 'https://raw.githubusercontent.com/Odyssey-Labs-AI/Odyssey-Labs-Main-Website/refs/heads/main/team/Kazex.png?token=GHSAT0AAAAAACYJHYF5PF5X3R3LYMCLMZJ4Z33D2BA',
-    bio: 'Kazex has a passion for creating innovative AI models.',
-    social: {},
-    hoverEffect: 'hover:scale-105 hover:rotate-1 hover:shadow-xl hover:shadow-cyan-500/40'
-  },
-  {
     name: 'Dark25',
     role: 'External Research Engineer',
     image: '/team/69cee180fb158434697982c71fa4ea0a.png',
@@ -121,6 +113,14 @@ const teamMembers = [
       github: 'https://github.com/ruben-david-roy',
     },
     hoverEffect: 'hover:-translate-y-1 hover:translate-x-1 hover:shadow-lg hover:shadow-purple-500/40'
+  },
+  {
+    name: 'Kazex',
+    role: 'Media Director',
+    image: 'https://raw.githubusercontent.com/Odyssey-Labs-AI/Odyssey-Labs-Main-Website/refs/heads/main/team/Kazex.png?token=GHSAT0AAAAAACYJHYF5PF5X3R3LYMCLMZJ4Z33D2BA',
+    bio: 'Kazex has a passion for creating innovative AI models.',
+    social: {},
+    hoverEffect: 'hover:scale-105 hover:rotate-1 hover:shadow-xl hover:shadow-cyan-500/40'
   },
 ];
 
