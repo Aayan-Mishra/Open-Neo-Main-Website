@@ -20,7 +20,7 @@ const projects = [
     icon: <Brain className="h-12 w-12 text-purple-500" />,
     name: 'Hercules-3',
     description: 'Advanced language model pushing the boundaries of natural language understanding.',
-    status: 'Active',
+    status: 'Under Maintenance',
     link: '/projects/hercules',
     demoUrl: 'https://odyssey-labs-hercules-3-1b.hf.space',
     imageLayout: 'grid',
