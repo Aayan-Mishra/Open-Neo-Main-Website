@@ -5,7 +5,7 @@ const papers = [
   {
     title: 'Announcing Odyssey Labs - SOTA GenAI',
     authors: 'Odyssey Labs',
-    date: '2025',
+    date: 'Jan 2025',
     conference: 'News',
     abstract: 'Today, we are thrilled to announce the launch of Odyssey Labs. As a key contributor to the generative AI research community, our mission is to pioneer and refine state-of-the-art generative deep learning models for media, including images and videos, and to push the boundaries of creativity, efficiency, and diversity. We believe that generative AI will…',
     link: 'https://huggingface.co/odyssey-labs',
