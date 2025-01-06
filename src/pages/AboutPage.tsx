@@ -107,7 +107,7 @@ const teamMembers = [
   {
     name: 'Kazex',
     role: 'Media Director',
-    image: './team/Kazex.png',
+    image: 'https://raw.githubusercontent.com/Odyssey-Labs-AI/Odyssey-Labs-Main-Website/refs/heads/main/team/Kazex.png?token=GHSAT0AAAAAACYJHYF5PF5X3R3LYMCLMZJ4Z33D2BA',
     bio: 'Kazex has a passion for creating innovative AI models.',
     social: {},
     hoverEffect: 'hover:scale-105 hover:rotate-1 hover:shadow-xl hover:shadow-cyan-500/40'
