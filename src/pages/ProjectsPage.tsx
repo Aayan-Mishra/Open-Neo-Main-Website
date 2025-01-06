@@ -5,7 +5,7 @@ const projects = [
   {
     icon: <Image className="h-12 w-12 text-blue-500" />,
     name: 'OdysseyXL',
-    description: 'State-of-the-art text-to-image generation model with unprecedented quality and control.',
+    description: "State-of-the-art text-to-image generation model with unprecedented quality and control. Powerd by Stability.ai's SDXL 1.0",
     status: 'Active',
     link: '/projects/odysseyxl',
     demoUrl: 'https://john6666-votepurchase-multiple-model.hf.space',
