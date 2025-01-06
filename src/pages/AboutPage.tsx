@@ -107,7 +107,7 @@ const teamMembers = [
   {
     name: 'Kazex',
     role: 'Media Director',
-    image: '/team/Kazex.png',
+    image: './team/Kazex.png',
     bio: 'Kazex has a passion for creating innovative AI models.',
     social: {},
     hoverEffect: 'hover:scale-105 hover:rotate-1 hover:shadow-xl hover:shadow-cyan-500/40'
