@@ -3,23 +3,14 @@ import { FileText, ArrowRight } from 'lucide-react';
 
 const papers = [
   {
-    title: 'Advancing Text-to-Image Generation with OdysseyXL',
-    authors: 'Ramo',
+    title: 'Announcing Odyssey Labs - SOTA GenAI',
+    authors: 'Odyssey Labs',
     date: '2025',
-    conference: 'Diffusion Models',
-    abstract: 'This paper presents OdysseyXL, a novel approach to text-to-image generation...',
-    link: 'https://huggingface.co/collections/odyssey-labs/odysseyxl-677615b1f9117ef6f9fd979e',
-    image: '/projects/odyssey/odysseyxl.png'
+    conference: 'News',
+    abstract: 'Today, we are thrilled to announce the launch of Odyssey Labs. As a key contributor to the generative AI research community, our mission is to pioneer and refine state-of-the-art generative deep learning models for media, including images and videos, and to push the boundaries of creativity, efficiency, and diversity. We believe that generative AI will…',
+    link: 'https://huggingface.co/odyssey-labs',
+    image: 'https://raw.githubusercontent.com/Odyssey-Labs-AI/Media/refs/heads/main/odysseylabsfix.png'
   },
-  {
-    title: 'Hercules-3: A New Era of Text Generation',
-    authors: 'Spestly',
-    date: '2025',
-    conference: 'Transformer Models',
-    abstract: 'This paper presents Hercules-3, a new generation of text generation models...',
-    link: 'https://huggingface.co/collections/odyssey-labs/hercules-3-67761653999dab7ca23c7981',
-    image: '/projects/hercules/Hercules-3.png'
-  }
 ];
 
 export default function ResearchPage() {
@@ -30,7 +21,7 @@ export default function ResearchPage() {
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl font-bold mb-6">Research & Publications</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Explore our latest research papers, publications, and scientific contributions
+            Explore our latest research papers, announcements, and scientific contributions
             to the field of artificial intelligence.
           </p>
         </div>
