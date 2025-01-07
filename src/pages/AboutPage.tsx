@@ -86,7 +86,7 @@ const teamMembers = [
   },
   {
     name: 'Ramo',
-    role: 'Creative Director',
+    role: 'Creative Lead',
     image: 'https://raw.githubusercontent.com/Odyssey-Labs-AI/Media/refs/heads/main/ramo.png',
     bio: 'Ramo is a creative director with a passion for creating innovative AI models.',
     social: {
@@ -116,7 +116,7 @@ const teamMembers = [
   },
   {
     name: 'Kazex',
-    role: 'Media Director',
+    role: 'Media Lead',
     image: 'https://raw.githubusercontent.com/Odyssey-Labs-AI/Media/refs/heads/main/Kazex.jpg',
     bio: 'Kazex has a passion for creating innovative AI models.',
     social: {},
