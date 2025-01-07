@@ -87,7 +87,7 @@ const teamMembers = [
   {
     name: 'Ramo',
     role: 'Creative Director',
-    image: 'https://raw.githubusercontent.com/Odyssey-Labs-AI/Odyssey-Labs-Main-Website/refs/heads/main/team/ramo.png?token=GHSAT0AAAAAACYJHYF5UTZXC3K5IHUEB3TEZ334LHQ',
+    image: 'https://raw.githubusercontent.com/Odyssey-Labs-AI/Media/refs/heads/main/ramo.png',
     bio: 'Ramo is a creative director with a passion for creating innovative AI models.',
     social: {
       github: 'https://github.com/iRamo65',
@@ -117,7 +117,7 @@ const teamMembers = [
   {
     name: 'Kazex',
     role: 'Media Director',
-    image: 'https://raw.githubusercontent.com/Odyssey-Labs-AI/Odyssey-Labs-Main-Website/refs/heads/main/team/Kazex.png?token=GHSAT0AAAAAACYJHYF5PF5X3R3LYMCLMZJ4Z33D2BA',
+    image: 'https://raw.githubusercontent.com/Odyssey-Labs-AI/Media/refs/heads/main/Kazex.jpg',
     bio: 'Kazex has a passion for creating innovative AI models.',
     social: {},
     hoverEffect: 'hover:scale-105 hover:rotate-1 hover:shadow-xl hover:shadow-cyan-500/40'
