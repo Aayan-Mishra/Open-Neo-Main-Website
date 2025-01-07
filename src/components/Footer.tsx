@@ -57,12 +57,12 @@ export default function Footer() {
                 <Mail className="h-5 w-5" />
               </a>
               <a 
-                href="https://odysseylabs.statuspage.io/"
+                href="https://discord.gg/mZ9BxT29Hz"
                 className="text-gray-400 hover:text-white"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Monitor className="h-5 w-5" />
+                <MessageSquareMore className="h-5 w-5" />
               </a>
             </div>
           </div>
