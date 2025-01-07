@@ -62,7 +62,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <MessageSquareMore className="h-5 w-5" />
+                <Monitor className="h-5 w-5" />
               </a>
             </div>
           </div>
