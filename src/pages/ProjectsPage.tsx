@@ -7,7 +7,7 @@ const projects = [
     name: 'OdysseyXL',
     description: "State-of-the-art text-to-image generation model with unprecedented quality and control. Powerd by Stability.ai's SDXL 1.0",
     status: 'Active',
-    link: '/projects/odysseyxl',
+    link: 'https://odyssey-labs-docs.vercel.app/blog/odyssey-labs',
     demoUrl: 'https://john6666-votepurchase-multiple-model.hf.space',
     imageLayout: 'grid',
     images: [
@@ -18,11 +18,11 @@ const projects = [
   },
   {
     icon: <Brain className="h-12 w-12 text-purple-500" />,
-    name: 'Hercules-3',
-    description: 'Advanced language model pushing the boundaries of natural language understanding.',
-    status: 'Under Maintenance',
-    link: '/projects/hercules',
-    demoUrl: 'https://odyssey-labs-hercules-3-1b.hf.space',
+    name: 'Luna-1',
+    description: 'Advanced language model pushing the boundaries of natural language understanding. Both Agentic and Chat models. Powerd by Qwen2.5',
+    status: 'Under Development',
+    link: '/projects/luna',
+    demoUrl: '',
     imageLayout: 'grid',
     images: []
   },
