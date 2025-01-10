@@ -21,7 +21,7 @@ const projects = [
     name: 'Luna-1',
     description: 'Advanced language model pushing the boundaries of natural language understanding. Both Agentic and Chat models. Powerd by Qwen2.5',
     status: 'Under Development',
-    link: '/projects/luna',
+    link: '',
     demoUrl: '',
     imageLayout: 'grid',
     images: []
