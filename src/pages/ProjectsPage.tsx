@@ -7,7 +7,7 @@ const projects = [
     name: 'OdysseyXL',
     description: "State-of-the-art text-to-image generation model with unprecedented quality and control. Powerd by Stability.ai's SDXL 1.0",
     status: 'Active',
-    link: 'https://odyssey-labs-docs.vercel.app/blog/odyssey-labs',
+    link: 'https://github.com/Odyssey-Labs-AI/OdysseyXL',
     demoUrl: 'https://john6666-votepurchase-multiple-model.hf.space',
     imageLayout: 'grid',
     images: [
