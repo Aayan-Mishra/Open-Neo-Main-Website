@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, Users, Lightbulb, Target, Github, Linkedin } from 'lucide-react';
+import { Calendar, Users, Lightbulb, Target, Github, Mail, Twitter } from 'lucide-react';
 
 const milestones = [
   {
@@ -58,9 +58,10 @@ const teamMembers = [
     name: 'Spestly',
     role: 'Diffusion Model Engineer',
     image: '/team/spestly-ody.png',
-    bio: 'Spestly is a deep learning engineer with a passion for creating cutting-edge AI models.',
     social: {
       github: 'https://github.com/Aayan-Mishra',
+      x: 'https://x.com/Spestly',
+      contact: 'https://aayan-mishra.vercel.app/'
     },
     hoverEffect: 'hover:scale-105 hover:rotate-1 hover:shadow-xl hover:shadow-red-500/40'
   },
@@ -68,9 +69,10 @@ const teamMembers = [
     name: 'Adversing',
     role: 'Deep Learning Engineer',
     image: '/team/60707212.jpeg',
-    bio: 'Adversing is a deep learning engineer with a passion for creating cutting-edge AI models.',
     social: {
       github: 'https://github.com/Adversing',
+      x: 'https://x.com/adversing',
+      contact: 'adversing@odysseylabs.ai'
     },
     hoverEffect: 'hover:-translate-y-2 hover:shadow-lg hover:shadow-blue-500/40'
   },
@@ -78,9 +80,10 @@ const teamMembers = [
     name: 'macintosh',
     role: 'Machine Learning Engineer',
     image: '/team/191959356.png',
-    bio: 'macintosh is a machine learning engineer with a passion for creating cutting-edge AI models.',
     social: {
       github: 'https://github.com/maciint0sh',
+      x: 'https://x.com/macintosh',
+      contact: 'macintosh@odysseylabs.ai'
     },
     hoverEffect: 'hover:scale-[1.02] hover:-rotate-1 hover:shadow-lg hover:shadow-cyan-500/40'
   },
@@ -88,9 +91,10 @@ const teamMembers = [
     name: 'Ramo',
     role: 'Creative Lead',
     image: 'https://raw.githubusercontent.com/Odyssey-Labs-AI/Media/refs/heads/main/ramo.png',
-    bio: 'Ramo is a creative director with a passion for creating innovative AI models.',
     social: {
       github: 'https://github.com/iRamo65',
+      x: 'https://x.com/ramo',
+      contact: 'ramo@odysseylabs.ai'
     },
     hoverEffect: 'hover:translate-x-1 hover:-translate-y-1 hover:shadow-lg hover:shadow-green-500/40'
   },
@@ -98,9 +102,10 @@ const teamMembers = [
     name: 'Specter',
     role: 'Data Scientist',
     image: '/team/103417697.jpeg',
-    bio: 'Specter is a data scientist with a passion for creating innovative AI models.',
     social: {
       github: 'https://github.com/Aby-ss',
+      x: 'https://x.com/heyspecterr',
+      contact: 'raoabdulhadi952@gmail.com'
     },
     hoverEffect: 'hover:scale-105 hover:shadow-lg hover:shadow-rose-500/40'
   },
@@ -108,9 +113,10 @@ const teamMembers = [
     name: 'Dark25',
     role: 'External Research Engineer',
     image: '/team/69cee180fb158434697982c71fa4ea0a.png',
-    bio: 'Dark25 has a passion for creating innovative AI models.',
     social: {
       github: 'https://github.com/ruben-david-roy',
+      x: 'https://x.com/dark25',
+      contact: 'dark25@odysseylabs.ai'
     },
     hoverEffect: 'hover:-translate-y-1 hover:translate-x-1 hover:shadow-lg hover:shadow-purple-500/40'
   },
@@ -118,13 +124,30 @@ const teamMembers = [
     name: 'Kazex',
     role: 'Media Lead',
     image: 'https://raw.githubusercontent.com/Odyssey-Labs-AI/Media/refs/heads/main/Kazex.jpg',
-    bio: 'Kazex has a passion for creating innovative AI models.',
-    social: {},
+    social: {
+      github: 'https://github.com/kazex',
+      x: 'https://x.com/kazex',
+      contact: 'kazex@odysseylabs.ai'
+    },
     hoverEffect: 'hover:scale-105 hover:rotate-1 hover:shadow-xl hover:shadow-cyan-500/40'
   },
 ];
 
 export default function AboutPage() {
+  const isEmail = (str) => {
+    return str.includes('@') && str.includes('.');
+  };
+
+  const getContactHref = (contact) => {
+    if (isEmail(contact)) {
+      return `mailto:${contact}`;
+    }
+    if (!contact.startsWith('http')) {
+      return `https://${contact}`;
+    }
+    return contact;
+  };
+
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
@@ -220,17 +243,39 @@ export default function AboutPage() {
                 </div>
                 <div className="text-center">
                   <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                  <p className="text-blue-400 mb-3">{member.role}</p>
-                  <p className="text-gray-300 mb-4">{member.bio}</p>
+                  <p className="text-blue-400 mb-4">{member.role}</p>
                   <div className="flex justify-center gap-4">
                     {member.social.github && (
                       <a 
                         href={member.social.github} 
-                        className="text-gray-400 hover:text-white"
+                        className="text-gray-400 hover:text-white transition-colors"
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label={`${member.name}'s GitHub`}
                       >
                         <Github className="h-5 w-5" />
+                      </a>
+                    )}
+                    {member.social.x && (
+                      <a 
+                        href={member.social.x}
+                        className="text-gray-400 hover:text-white transition-colors"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${member.name}'s X (Twitter)`}
+                      >
+                        <Twitter className="h-5 w-5" />
+                      </a>
+                    )}
+                    {member.social.contact && (
+                      <a 
+                        href={getContactHref(member.social.contact)}
+                        className="text-gray-400 hover:text-white transition-colors"
+                        target={isEmail(member.social.contact) ? undefined : '_blank'}
+                        rel={isEmail(member.social.contact) ? undefined : 'noopener noreferrer'}
+                        aria-label={`Contact ${member.name}`}
+                      >
+                        <Mail className="h-5 w-5" />
                       </a>
                     )}
                   </div>
