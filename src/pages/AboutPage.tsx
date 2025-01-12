@@ -88,17 +88,6 @@ const teamMembers = [
     hoverEffect: 'hover:scale-[1.02] hover:-rotate-1 hover:shadow-lg hover:shadow-cyan-500/40'
   },
   {
-    name: 'Ramo',
-    role: 'Creative Lead',
-    image: 'https://raw.githubusercontent.com/Odyssey-Labs-AI/Media/refs/heads/main/ramo.png',
-    social: {
-      github: 'https://github.com/iRamo65',
-      x: 'https://x.com/ramo',
-      contact: 'ramo@odysseylabs.ai'
-    },
-    hoverEffect: 'hover:translate-x-1 hover:-translate-y-1 hover:shadow-lg hover:shadow-green-500/40'
-  },
-  {
     name: 'Specter',
     role: 'Data Scientist',
     image: '/team/103417697.jpeg',
@@ -119,17 +108,6 @@ const teamMembers = [
       contact: 'mail@ruben-roy.com'
     },
     hoverEffect: 'hover:-translate-y-1 hover:translate-x-1 hover:shadow-lg hover:shadow-purple-500/40'
-  },
-  {
-    name: 'Kazex',
-    role: 'Media Lead',
-    image: 'https://raw.githubusercontent.com/Odyssey-Labs-AI/Media/refs/heads/main/Kazex.jpg',
-    social: {
-      github: 'https://github.com/kazex',
-      x: 'https://x.com/32GIGABYTES_YT',
-      contact: 'kazex@odysseylabs.ai'
-    },
-    hoverEffect: 'hover:scale-105 hover:rotate-1 hover:shadow-xl hover:shadow-cyan-500/40'
   },
 ];
 
