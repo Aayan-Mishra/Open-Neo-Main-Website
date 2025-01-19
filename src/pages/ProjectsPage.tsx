@@ -19,7 +19,7 @@ const projects = [
     {
     icon: <Atom className="h-12 w-12 text-orange-500" />,
     name: 'Astral 1',
-    description: 'A state-of-the-art language model driven by Gemma 2, crafted for both agentic and chat-based interactions, setting new standards in natural language comprehension.',
+    description: 'A state-of-the-art language model driven by Gemma 2, crafted for both agentic and chat-based interactions, setting new standards in natural language comprehension and reasoning.',
     status: 'Under Development',
     link: '',
     demoUrl: '',
