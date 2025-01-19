@@ -1,5 +1,5 @@
 import React from 'react';
-import { Brain, Image, MessageSquare, Cpu, ExternalLink } from 'lucide-react';
+import { Brain, Image, MessageSquare, Cpu, ExternalLink, Atom} from 'lucide-react';
 
 const projects = [
   {
@@ -16,11 +16,21 @@ const projects = [
       '/projects/odyssey/3.png'
     ]
   },
+    {
+    icon: <Atom className="h-12 w-12 text-orange-500" />,
+    name: 'Astral 1',
+    description: 'A state-of-the-art language model driven by Gemma 2, crafted for both agentic and chat-based interactions, setting new standards in natural language comprehension.',
+    status: 'Under Development',
+    link: '',
+    demoUrl: '',
+    imageLayout: 'grid',
+    images: []
+  },
   {
     icon: <Brain className="h-12 w-12 text-purple-500" />,
     name: 'Luna-1',
     description: 'Advanced language model pushing the boundaries of natural language understanding. Both Agentic and Chat models. Powerd by Qwen2.5',
-    status: 'Under Development',
+    status: 'Active',
     link: '',
     demoUrl: '',
     imageLayout: 'grid',
