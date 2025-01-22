@@ -57,7 +57,7 @@ const teamMembers = [
   {
     name: 'Spestly',
     role: 'Diffusion Model Engineer',
-    image: '/team/spestly-ody.png',
+    image: 'https://cdn-avatars.huggingface.co/v1/production/uploads/669c7b63fe9496b3c680ed87/q5ZIvWlOkLc4PDz40H8o_.jpeg',
     social: {
       github: 'https://github.com/Aayan-Mishra',
       x: 'https://x.com/Spestly',
