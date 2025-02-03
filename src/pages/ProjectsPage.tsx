@@ -16,22 +16,12 @@ const projects = [
       '/projects/odyssey/3.png'
     ]
   },
-    {
-    icon: <Atom className="h-12 w-12 text-orange-500" />,
-    name: 'Astral 1',
-    description: 'A state-of-the-art language model driven by Gemma 2, crafted for both agentic and chat-based interactions, setting new standards in natural language comprehension and reasoning.',
-    status: 'Under Development',
-    link: '',
-    demoUrl: '',
-    imageLayout: 'grid',
-    images: []
-  },
   {
     icon: <Brain className="h-12 w-12 text-purple-500" />,
-    name: 'Luna-1',
+    name: 'Apollo-1',
     description: 'Advanced language model pushing the boundaries of natural language understanding. Both Agentic and Chat models. Powerd by Qwen2.5',
-    status: 'Active',
-    link: '',
+    status: 'Under Development',
+    link: 'https://huggingface.co/collections/odyssey-labs/apollo-1-67a0699068444e40017e4558',
     demoUrl: '',
     imageLayout: 'grid',
     images: []
