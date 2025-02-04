@@ -14,8 +14,8 @@ const milestones = [
   },
   {
     date: 'January 2025',
-    title: 'Hercules-3',
-    description: 'Launched our flagship text generation model, Hercules-3.'
+    title: 'Apollo-1',
+    description: 'Launched our first text generation model, Apollo-1.'
   },
 ];
 
