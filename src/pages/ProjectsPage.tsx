@@ -7,7 +7,7 @@ const projects = [
     name: 'OdysseyXL',
     description: "State-of-the-art text-to-image generation model with unprecedented quality and control. Powerd by Stability.ai's SDXL 1.0",
     status: 'Active',
-    link: 'https://github.com/Odyssey-Labs-AI/OdysseyXL',
+    link: 'https://huggingface.co/collections/open-neo/odysseyxl-67d4cf53fa315a2e04ca20d5',
     demoUrl: 'https://john6666-votepurchase-multiple-model.hf.space',
     imageLayout: 'grid',
     images: [
@@ -18,10 +18,10 @@ const projects = [
   },
   {
     icon: <Brain className="h-12 w-12 text-purple-500" />,
-    name: 'Apollo-1',
+    name: 'Kyro-n1',
     description: 'Advanced language model pushing the boundaries of natural language understanding. Both Agentic and Chat models. Powerd by Qwen2.5',
-    status: 'Under Development',
-    link: 'https://huggingface.co/collections/odyssey-labs/apollo-1-67a0699068444e40017e4558',
+    status: 'Active',
+    link: 'https://huggingface.co/collections/open-neo/kyro-n1-67ab2e7bbc76a9aab3030c21',
     demoUrl: '',
     imageLayout: 'grid',
     images: []
