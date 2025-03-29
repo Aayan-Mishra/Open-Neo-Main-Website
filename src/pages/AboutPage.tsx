@@ -14,8 +14,13 @@ const milestones = [
   },
   {
     date: 'January 2025',
-    title: 'Apollo-1',
-    description: 'Launched our first text generation model, Apollo-1.'
+    title: 'Kyro-n1',
+    description: 'Launched our first text generation model, Kyro-n1.'
+  },
+  {
+    date: 'February 2025',
+    title: 'Open-Neo',
+    description: 'Odyssey Labs is renamed to Open-Neo'
   },
 ];
 
@@ -131,7 +136,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl font-bold mb-6">About Odyssey Labs</h1>
+          <h1 className="text-5xl font-bold mb-6">About Open-Neo</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             We are a team of researchers, engineers, and innovators dedicated to advancing
             the field of artificial intelligence through groundbreaking research and development.
