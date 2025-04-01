@@ -22,7 +22,7 @@ const projects = [
     description: 'Advanced language model pushing the boundaries of natural language understanding. Both Agentic and Chat models. Powerd by Qwen2.5',
     status: 'Active',
     link: 'https://huggingface.co/collections/open-neo/kyro-n1-67ab2e7bbc76a9aab3030c21',
-    demoUrl: '',
+    demoUrl: 'https://huggingface.co/spaces/open-neo/Kyro-n1-3B',
     imageLayout: 'grid',
     images: []
   },
