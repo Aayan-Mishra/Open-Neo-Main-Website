@@ -3,24 +3,14 @@ import { Calendar, Users, Lightbulb, Target, Github, Mail, Twitter } from 'lucid
 
 const milestones = [
   {
-    date: 'October 2024',
-    title: 'OdysseyXL was born',
-    description: 'Believe it or not but OdysseyXL was a small personal project!'
+    date: 'May 2025',
+    title: 'Noema Labs was born',
+    description: 'On May 15st, 2025, Noema Labs was officially launched as a research lab focused on AI.',
   },
   {
-    date: 'January 2025',
-    title: 'Odyssey Labs',
-    description: 'With the rapid growth of OdysseyXL, we decided to turn it into a full-fledged research lab.'
-  },
-  {
-    date: 'January 2025',
-    title: 'Kyro-n1',
-    description: 'Launched our first text generation model, Kyro-n1.'
-  },
-  {
-    date: 'February 2025',
-    title: 'Open-Neo',
-    description: 'Odyssey Labs is renamed to Open-Neo'
+    date: 'May 2025',
+    title: 'NoemaCoder-T1-8B Preview',
+    description: 'The first preview of NoemaCoder-T1-8B was released (soon!), showcasing our commitment to open-source AI.',
   },
 ];
 
@@ -32,7 +22,7 @@ const values = [
       </div>
     ),
     title: 'Innovation First',
-    description: 'Pushing the boundaries of what\'s possible in AI research.'
+    description: "Pushing the boundaries of what's possible in AI research.",
   },
   {
     icon: (
@@ -45,7 +35,7 @@ const values = [
       </div>
     ),
     title: 'Impact Driven',
-    description: 'Creating solutions that make a real difference in the world.'
+    description: 'Creating solutions that make a real difference in the world.',
   },
   {
     icon: (
@@ -54,74 +44,96 @@ const values = [
       </div>
     ),
     title: 'Collaborative Spirit',
-    description: 'Working together to achieve breakthrough results.'
-  }
+    description: 'Working together to achieve breakthrough results.',
+  },
 ];
 
 const teamMembers = [
   {
-    name: 'Spestly',
-    role: 'Diffusion Model Engineer',
-    image: 'https://cdn-avatars.huggingface.co/v1/production/uploads/669c7b63fe9496b3c680ed87/q5ZIvWlOkLc4PDz40H8o_.jpeg',
+    name: 'Aayan Mishra',
+    role: '',
+    image: 'https://cdn-avatars.huggingface.co/v1/production/uploads/669c7b63fe9496b3c680ed87/duK8vCRM2UBvtxhM5h2va.jpeg',
     social: {
-      github: 'https://github.com/Aayan-Mishra',
-      x: 'https://x.com/Spestly',
-      contact: 'https://aayan-mishra.vercel.app/'
+      github: '',
+      x: '',
+      contact: '',
     },
-    hoverEffect: 'hover:scale-105 hover:rotate-1 hover:shadow-xl hover:shadow-red-500/40'
+    hoverEffect: 'hover:scale-105 hover:rotate-1 hover:shadow-xl hover:shadow-red-500/40',
+  },
+  {
+    name: 'Ameer Azam',
+    role: '',
+    image: 'https://cdn-avatars.huggingface.co/v1/production/uploads/6266513d539521e602b5dc3a/NsKi_PW21BkNq5F-TdnHt.png',
+    social: {
+      github: 'https://github.com/ameerazam08',
+      x: '',
+      contact: '',
+    },
+    hoverEffect: 'hover:-translate-y-2 hover:shadow-lg hover:shadow-blue-500/40',
   },
   {
     name: 'Adversing',
-    role: 'Deep Learning Engineer',
+    role: '',
     image: '/team/60707212.jpeg',
     social: {
       github: 'https://github.com/Adversing',
       x: 'https://x.com/adversing',
-      contact: 'adversing@odysseylabs.ai'
+      contact: ''
     },
     hoverEffect: 'hover:-translate-y-2 hover:shadow-lg hover:shadow-blue-500/40'
   },
   {
-    name: 'macintosh',
-    role: 'Machine Learning Engineer',
-    image: '/team/191959356.png',
+    name: 'Arush Sharma',
+    role: '',
+    image: 'https://cdn-avatars.huggingface.co/v1/production/uploads/65b2ac56e4191ceeb406aa4b/s4evTNuBvU-580uGg9X1v.png',
     social: {
-      github: 'https://github.com/maciint0sh',
-      x: 'https://x.com/macintosh',
-      contact: 'macintosh@odysseylabs.ai'
+      github: 'https://github.com/Arush04',
+      x: '',
+      contact: '',
     },
-    hoverEffect: 'hover:scale-[1.02] hover:-rotate-1 hover:shadow-lg hover:shadow-cyan-500/40'
+    hoverEffect: 'hover:scale-[1.02] hover:-rotate-1 hover:shadow-lg hover:shadow-cyan-500/40',
   },
   {
-    name: 'Specter',
-    role: 'Data Scientist',
-    image: '/team/103417697.jpeg',
+    name: 'Hafedh Hichri',
+    role: '',
+    image: 'https://avatars.githubusercontent.com/u/70411813?v=4',
     social: {
-      github: 'https://github.com/Aby-ss',
-      x: 'https://x.com/heyspecterr',
-      contact: 'raoabdulhadi952@gmail.com'
+      github: 'https://github.com/not-lain',
+      x: '',
+      contact: '',
     },
-    hoverEffect: 'hover:scale-105 hover:shadow-lg hover:shadow-rose-500/40'
+    hoverEffect: 'hover:scale-105 hover:shadow-lg hover:shadow-rose-500/40',
   },
   {
-    name: 'Dark25',
-    role: 'External Research Engineer',
-    image: '/team/69cee180fb158434697982c71fa4ea0a.png',
+    name: 'Jordan Pfost',
+    role: '',
+    image: 'https://cdn-avatars.huggingface.co/v1/production/uploads/no-auth/hbBSfayZfpLYrE925K7zV.png',
     social: {
-      github: 'https://github.com/ruben-david-roy',
-      x: 'https://x.com/rubendavidroy',
-      contact: 'mail@ruben-roy.com'
+      github: 'https://github.com/fromancient',
+      x: '',
+      contact: '',
     },
-    hoverEffect: 'hover:-translate-y-1 hover:translate-x-1 hover:shadow-lg hover:shadow-purple-500/40'
+    hoverEffect: 'hover:-translate-y-1 hover:translate-x-1 hover:shadow-lg hover:shadow-purple-500/40',
+  },
+  {
+    name: 'Ashay Srivastava',
+    role: '',
+    image: 'https://cdn-avatars.huggingface.co/v1/production/uploads/653d84f13fc9c706fa755d03/F_jYbeuLLM9EX8hKXcbHD.png',
+    social: {
+      github: 'https://github.com/ashay-sriv-06',
+      x: '',
+      contact: '',
+    },
+    hoverEffect: 'hover:-translate-y-1 hover:translate-x-1 hover:shadow-lg hover:shadow-orange-500/40',
   },
 ];
 
 export default function AboutPage() {
-  const isEmail = (str) => {
+  const isEmail = (str: string) => {
     return str.includes('@') && str.includes('.');
   };
 
-  const getContactHref = (contact) => {
+  const getContactHref = (contact: string) => {
     if (isEmail(contact)) {
       return `mailto:${contact}`;
     }
@@ -136,7 +148,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl font-bold mb-6">About Open-Neo</h1>
+          <h1 className="text-5xl font-bold mb-6">About Noema Labs</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             We are a team of researchers, engineers, and innovators dedicated to advancing
             the field of artificial intelligence through groundbreaking research and development.
