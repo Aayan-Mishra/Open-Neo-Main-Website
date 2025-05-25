@@ -3,14 +3,19 @@ import { Calendar, Users, Lightbulb, Target, Github, Mail, Twitter } from 'lucid
 
 const milestones = [
   {
-    date: 'May 2025',
-    title: 'Noema Labs was born',
-    description: 'On May 15st, 2025, Noema Labs was officially launched as a research lab focused on AI.',
+    date: 'January 2025',
+    title: 'Open-Neo was born',
+    description: 'On January 15st, 2025, Open-Neo was officially launched as a research lab focused on AI.',
+  },
+    {
+    date: 'March 2025',
+    title: 'Kyro-n1 was born',
+    description: 'On March 30th, 2025, Kyro-n1 (A demo model from Open-Neo) was released to the public',
   },
   {
     date: 'May 2025',
-    title: 'NoemaCoder-T1-8B Preview',
-    description: 'The first preview of NoemaCoder-T1-8B was released (soon!), showcasing our commitment to open-source AI.',
+    title: 'Noema-T1 Preview',
+    description: 'The first preview of the Noema-T1 family was released (soon!), showcasing our commitment to open-source AI.',
   },
 ];
 
