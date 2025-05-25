@@ -3,13 +3,13 @@ import { FileText, ArrowRight } from 'lucide-react';
 
 const papers = [
   {
-    title: 'Announcing Odyssey Labs - SOTA GenAI',
+    title: 'Announcing Open-Neo - SOTA Generative AI',
     authors: 'Odyssey Labs',
     date: 'Jan 2025',
     conference: 'News',
-    abstract: 'Today, we are thrilled to announce the launch of Odyssey Labs. As a key contributor to the generative AI research community, our mission is to pioneer and refine state-of-the-art generative deep learning models for media, including images and videos, and to push the boundaries of creativity, efficiency, and diversity. We believe that generative AI will…',
-    link: 'https://odyssey-labs-docs.vercel.app/blog/odyssey-labs',
-    image: 'https://raw.githubusercontent.com/Odyssey-Labs-AI/Media/refs/heads/main/odysseylabsfix.png'
+    abstract: 'Today, we are thrilled to announce the launch of Open-Neo. As a key contributor to the generative AI research community, our mission is to pioneer and refine state-of-the-art generative deep learning models for media, including images and videos, and to push the boundaries of creativity, efficiency, and diversity. We believe that generative AI will…',
+    link: 'https://huggingface.co/open-neo',
+    image: 'https://cdn-lfs-us-1.hf.co/repos/16/14/1614554dd1168c7fec8df36ea340434a161d77f621eebc46439941088c6b783c/23538cc1a979fd9fc702cab5b38aa02c5f01b85dfb0f88cb696d323a166af076?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27Open-Neo.png%3B+filename%3D%22Open-Neo.png%22%3B&response-content-type=image%2Fpng&Expires=1748141131&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc0ODE0MTEzMX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zLzE2LzE0LzE2MTQ1NTRkZDExNjhjN2ZlYzhkZjM2ZWEzNDA0MzRhMTYxZDc3ZjYyMWVlYmM0NjQzOTk0MTA4OGM2Yjc4M2MvMjM1MzhjYzFhOTc5ZmQ5ZmM3MDJjYWI1YjM4YWEwMmM1ZjAxYjg1ZGZiMGY4OGNiNjk2ZDMyM2ExNjZhZjA3Nj9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSomcmVzcG9uc2UtY29udGVudC10eXBlPSoifV19&Signature=GToRByQVLFj5p%7ER6upx3RLhb-A-bNNrWNbMK11bGQ2JX5Pn5EWhdomF8U4xAvs8UH1izQzfQXO53GNRJ7lAV2llNr3JusBQfuYPijbACHd-Ba11xpCKdikeU-3pWAnOglg9EwFJ3%7EeV1cNQqGpzi08bIlfmixd33JAyC1wI0My51sgA7LtIrQSrKJENrefqaohl2uTB2d8NIqaeLMYLzE03vulM7sU9F7KVOSFK-ocO--cUzX2vHez6bvOeXP47nQWs8IxPc-3QYKvhowwsskO07kWOyCSBu%7EoH8uPJR-YiV9R6-e7%7E1bVUZXS%7E-JM39QkUYF1dSrGWMsPi-XfepOA__&Key-Pair-Id=K24J24Z295AEI9'
   },
 ];
 
