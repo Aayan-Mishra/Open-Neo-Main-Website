@@ -3,26 +3,12 @@ import { Brain, Image, MessageSquare, Cpu, ExternalLink, Atom} from 'lucide-reac
 
 const projects = [
   {
-    icon: <Image className="h-12 w-12 text-blue-500" />,
-    name: 'OdysseyXL',
-    description: "State-of-the-art text-to-image generation model with unprecedented quality and control. Powerd by Stability.ai's SDXL 1.0",
-    status: 'Active',
-    link: 'https://huggingface.co/collections/open-neo/odysseyxl-67d4cf53fa315a2e04ca20d5',
-    demoUrl: 'https://john6666-votepurchase-multiple-model.hf.space',
-    imageLayout: 'grid',
-    images: [
-      '/projects/odyssey/1.png',
-      '/projects/odyssey/2.webp',
-      '/projects/odyssey/3.png'
-    ]
-  },
-  {
     icon: <Brain className="h-12 w-12 text-purple-500" />,
-    name: 'Kyro-n1',
-    description: 'Advanced language model pushing the boundaries of natural language understanding. Both Agentic and Chat models. Powerd by Qwen2.5',
+    name: 'Noema-T1',
+    description: 'Advanced language model pushing the boundaries of natural language understanding. Both Agentic and Chat models. Powerd by Qwen3',
     status: 'Active',
-    link: 'https://huggingface.co/collections/open-neo/kyro-n1-67ab2e7bbc76a9aab3030c21',
-    demoUrl: 'https://huggingface.co/spaces/open-neo/Kyro-n1-3B',
+    link: 'https://huggingface.co/spaces/open-neo/Noema-T1-Homepage',
+    demoUrl: '',
     imageLayout: 'grid',
     images: []
   },
