@@ -34,7 +34,7 @@ export default function ContactPage() {
                 <div className="flex items-start gap-4 p-4 bg-black/30 rounded-xl border border-white/10 hover:border-white/20 transition-all duration-200 group shadow-md">
                   <MapPin className="h-6 w-6 text-blue-500 group-hover:scale-110 transition-transform duration-200" />
                   <div>
-                    <h3 className="font-medium mb-1 text-white">Location</h3>
+                    <h3 className="font-medium mb-1 text-white">Headquarters</h3>
                     <p className="text-gray-300">
                       Sydney, Australia 🇦🇺 <br />
                     </p>
@@ -44,7 +44,7 @@ export default function ContactPage() {
                   <Mail className="h-6 w-6 text-blue-500 group-hover:scale-110 transition-transform duration-200" />
                   <div>
                     <h3 className="font-medium mb-1 text-white">Email</h3>
-                    <p className="text-gray-300">odysseylabs.ai@proton.me</p>
+                    <p className="text-gray-300">open-neo@proton.me</p>
                   </div>
                 </div>
               </div>
