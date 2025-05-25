@@ -62,7 +62,7 @@ export default function ResearchPage() {
                         href={paper.link}
                         className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors"
                       >
-                        Read Paper
+                        Read More
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </a>
                     </div>
