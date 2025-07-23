@@ -104,7 +104,7 @@ export default function Footer() {
         
         <div className="mt-8 pt-8 border-t border-white/10 text-center">
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} Open-Neo. All rights reserved.
+            © {new Date().getFullYear()} Apexion AI. All rights reserved.
           </p>
         </div>
       </div>
