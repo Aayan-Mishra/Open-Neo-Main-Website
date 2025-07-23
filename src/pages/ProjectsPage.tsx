@@ -4,11 +4,11 @@ import { Brain, Image, MessageSquare, Cpu, ExternalLink, Atom} from 'lucide-reac
 const projects = [
   {
     icon: <Brain className="h-12 w-12 text-purple-500" />,
-    name: 'Noema-T1',
+    name: 'Nous-1',
     description: 'Advanced language model pushing the boundaries of natural language understanding. Both Agentic and Chat models. Powerd by Qwen3',
-    status: 'Active',
-    link: 'https://huggingface.co/spaces/open-neo/Noema-T1-Homepage',
-    demoUrl: '',
+    status: 'Preview',
+    link: 'https://huggingface.co/collections/apexion-ai/nous-1-6878a01de99748b159661a42',
+    demoUrl: 'https://huggingface.co/spaces/Spestly/Nous-1',
     imageLayout: 'grid',
     images: []
   },
