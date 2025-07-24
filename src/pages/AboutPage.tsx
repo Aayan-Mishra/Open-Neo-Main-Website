@@ -4,8 +4,8 @@ import { Calendar, Users, Lightbulb, Target, Github, Mail, Twitter } from 'lucid
 const milestones = [
   {
     date: 'July 2025',
-    title: 'Apexion was born',
-    description: 'On July 15th, 2025, Open-Neo was officially launched as a research lab focused on AI.',
+    title: 'Apexion AI was born',
+    description: 'On July 15th, 2025, Apexion AI was officially launched as a research lab focused on AI.',
   },
   {
     date: 'July 2025',
@@ -148,7 +148,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl font-bold mb-6">About Noema Labs</h1>
+          <h1 className="text-5xl font-bold mb-6">About Apexion AI</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             We are a team of researchers, engineers, and innovators dedicated to advancing
             the field of artificial intelligence through groundbreaking research and development.
