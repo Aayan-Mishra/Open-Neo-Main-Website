@@ -51,10 +51,10 @@ const values = [
 const teamMembers = [
   {
     name: 'Aayan Mishra',
-    role: '',
+    role: 'Founder & CEO & Head of Post-Training',
     image: 'https://cdn-avatars.huggingface.co/v1/production/uploads/669c7b63fe9496b3c680ed87/duK8vCRM2UBvtxhM5h2va.jpeg',
     social: {
-      github: '',
+      github: 'https://github.com/Aayan-Mishra',
       x: '',
       contact: '',
     },
@@ -62,7 +62,7 @@ const teamMembers = [
   },
   {
     name: 'Ameer Azam',
-    role: '',
+    role: 'Head of Data Management',
     image: 'https://cdn-avatars.huggingface.co/v1/production/uploads/6266513d539521e602b5dc3a/NsKi_PW21BkNq5F-TdnHt.png',
     social: {
       github: 'https://github.com/ameerazam08',
@@ -73,7 +73,7 @@ const teamMembers = [
   },
   {
     name: 'Adversing',
-    role: '',
+    role: 'Chief Research Officer ',
     image: '/team/60707212.jpeg',
     social: {
       github: 'https://github.com/Adversing',
@@ -84,7 +84,7 @@ const teamMembers = [
   },
   {
     name: 'Arush Sharma',
-    role: '',
+    role: 'Head of Evaluation & Intelligence Metrics',
     image: 'https://cdn-avatars.huggingface.co/v1/production/uploads/65b2ac56e4191ceeb406aa4b/s4evTNuBvU-580uGg9X1v.png',
     social: {
       github: 'https://github.com/Arush04',
@@ -95,7 +95,7 @@ const teamMembers = [
   },
   {
     name: 'Hafedh Hichri',
-    role: '',
+    role: 'Head of Model Behaviour & Research',
     image: 'https://avatars.githubusercontent.com/u/70411813?v=4',
     social: {
       github: 'https://github.com/not-lain',
@@ -106,7 +106,7 @@ const teamMembers = [
   },
   {
     name: 'Jordan Pfost',
-    role: '',
+    role: 'Head of Systems Integration and Deployment',
     image: 'https://cdn-avatars.huggingface.co/v1/production/uploads/no-auth/hbBSfayZfpLYrE925K7zV.png',
     social: {
       github: 'https://github.com/fromancient',
@@ -117,7 +117,7 @@ const teamMembers = [
   },
   {
     name: 'Ashay Srivastava',
-    role: '',
+    role: 'Head of Infrastructure',
     image: 'https://cdn-avatars.huggingface.co/v1/production/uploads/653d84f13fc9c706fa755d03/F_jYbeuLLM9EX8hKXcbHD.png',
     social: {
       github: 'https://github.com/ashay-sriv-06',
