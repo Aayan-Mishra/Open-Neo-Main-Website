@@ -58,12 +58,12 @@ export default function Hero() {
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
             Revolutionizing the{' '}
             <span className="animate-gradient bg-gradient-to-r from-red-500 via-yellow-500 via-green-500 via-blue-500 via-indigo-500 to-purple-500 bg-[size:200%] text-transparent bg-clip-text">
-              Future of AI
+              Future of Humanity
             </span>
           </h1>
           
           <p className="text-xl text-gray-300 max-w-2xl">
-            Pushing the boundaries of artificial intelligence through groundbreaking research and innovative solutions.
+            Advancing the frontiers of human knowledge through pioneering research and transformative innovation
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4">

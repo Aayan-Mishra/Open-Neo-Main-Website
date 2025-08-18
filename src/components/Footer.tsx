@@ -15,9 +15,9 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <h3 className="text-white font-bold text-lg">Apexion AI</h3>
+            <h3 className="text-white font-bold text-lg">Noema Research</h3>
             <p className="text-gray-400 text-sm">
-              Revolutionizing the future of AI through groundbreaking research and innovation.
+              Revolutionizing the future of Humanity through groundbreaking research and innovation.
             </p>
           </div>
           
@@ -104,7 +104,7 @@ export default function Footer() {
         
         <div className="mt-8 pt-8 border-t border-white/10 text-center">
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} Apexion AI. All rights reserved.
+            © {new Date().getFullYear()} Noema Research. All rights reserved.
           </p>
         </div>
       </div>

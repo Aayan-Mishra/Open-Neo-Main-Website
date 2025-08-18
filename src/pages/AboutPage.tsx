@@ -4,12 +4,12 @@ import { Calendar, Users, Lightbulb, Target, Github, Mail, Twitter } from 'lucid
 const milestones = [
   {
     date: 'July 2025',
-    title: 'Apexion AI was born',
-    description: 'On July 15th, 2025, Apexion AI was officially launched as a research lab focused on AI.',
+    title: 'Noema Research was born',
+    description: 'On July 15th, 2025, Noema Research was officially launched as a research lab focused on AI.',
   },
   {
     date: 'July 2025',
-    title: 'Nous-T1 Preview',
+    title: 'Nous-1 Preview',
     description: 'The first preview of the Nous-1 family was released, showcasing our commitment to open-source AI.',
   },
 ];
@@ -59,73 +59,7 @@ const teamMembers = [
       contact: '',
     },
     hoverEffect: 'hover:scale-105 hover:rotate-1 hover:shadow-xl hover:shadow-red-500/40',
-  },
-  {
-    name: 'Ameer Azam',
-    role: 'Head of Data Management',
-    image: 'https://cdn-avatars.huggingface.co/v1/production/uploads/6266513d539521e602b5dc3a/NsKi_PW21BkNq5F-TdnHt.png',
-    social: {
-      github: 'https://github.com/ameerazam08',
-      x: '',
-      contact: '',
-    },
-    hoverEffect: 'hover:-translate-y-2 hover:shadow-lg hover:shadow-blue-500/40',
-  },
-  {
-    name: 'Adversing',
-    role: 'Chief Research Officer ',
-    image: '/team/60707212.jpeg',
-    social: {
-      github: 'https://github.com/Adversing',
-      x: 'https://x.com/adversing',
-      contact: ''
-    },
-    hoverEffect: 'hover:-translate-y-2 hover:shadow-lg hover:shadow-blue-500/40'
-  },
-  {
-    name: 'Arush Sharma',
-    role: 'Head of Evaluation & Intelligence Metrics',
-    image: 'https://cdn-avatars.huggingface.co/v1/production/uploads/65b2ac56e4191ceeb406aa4b/s4evTNuBvU-580uGg9X1v.png',
-    social: {
-      github: 'https://github.com/Arush04',
-      x: '',
-      contact: '',
-    },
-    hoverEffect: 'hover:scale-[1.02] hover:-rotate-1 hover:shadow-lg hover:shadow-cyan-500/40',
-  },
-  {
-    name: 'Hafedh Hichri',
-    role: 'Head of Model Behaviour & Research',
-    image: 'https://avatars.githubusercontent.com/u/70411813?v=4',
-    social: {
-      github: 'https://github.com/not-lain',
-      x: '',
-      contact: '',
-    },
-    hoverEffect: 'hover:scale-105 hover:shadow-lg hover:shadow-rose-500/40',
-  },
-  {
-    name: 'Jordan Pfost',
-    role: 'Head of Systems Integration and Deployment',
-    image: 'https://cdn-avatars.huggingface.co/v1/production/uploads/no-auth/hbBSfayZfpLYrE925K7zV.png',
-    social: {
-      github: 'https://github.com/fromancient',
-      x: '',
-      contact: '',
-    },
-    hoverEffect: 'hover:-translate-y-1 hover:translate-x-1 hover:shadow-lg hover:shadow-purple-500/40',
-  },
-  {
-    name: 'Ashay Srivastava',
-    role: 'Head of Infrastructure',
-    image: 'https://cdn-avatars.huggingface.co/v1/production/uploads/653d84f13fc9c706fa755d03/F_jYbeuLLM9EX8hKXcbHD.png',
-    social: {
-      github: 'https://github.com/ashay-sriv-06',
-      x: '',
-      contact: '',
-    },
-    hoverEffect: 'hover:-translate-y-1 hover:translate-x-1 hover:shadow-lg hover:shadow-orange-500/40',
-  },
+  }
 ];
 
 export default function AboutPage() {
@@ -148,10 +82,10 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl font-bold mb-6">About Apexion AI</h1>
+          <h1 className="text-5xl font-bold mb-6">About Noema Research</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            We are a team of researchers, engineers, and innovators dedicated to advancing
-            the field of artificial intelligence through groundbreaking research and development.
+            We are a collective of researchers, engineers, and innovators 
+            advancing human evolution through artificial intelligence, education, and transformative research.
           </p>
         </div>
       </section>
