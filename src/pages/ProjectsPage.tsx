@@ -1,18 +1,7 @@
-import React from 'react';
-import { Brain, Image, MessageSquare, Cpu, ExternalLink, Atom} from 'lucide-react';
-
-const projects = [
-  {
-    icon: <Brain className="h-12 w-12 text-purple-500" />,
-    name: 'Nous-1',
-    description: 'Advanced language model pushing the boundaries of natural language understanding. Both Agentic and Chat models. Powerd by Qwen3',
-    status: 'Preview',
-    link: 'https://huggingface.co/collections/apexion-ai/nous-1-6878a01de99748b159661a42',
-    demoUrl: 'https://huggingface.co/spaces/Spestly/Nous-1',
-    imageLayout: 'grid',
-    images: []
-  },
-];
+// React import not required with new JSX transform
+import { Link } from 'react-router-dom';
+import { Brain, ExternalLink } from 'lucide-react';
+import projects from '../data/projects';
 
 export default function ProjectsPage() {
   return (
@@ -21,17 +10,18 @@ export default function ProjectsPage() {
         <div className="max-w-7xl mx-auto">
           <h1 className="text-5xl font-bold mb-8 text-center text-white">Our Projects</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto text-center mb-16">
-            Exploring the frontiers of artificial intelligence through innovative research and development.
+            Building tools and research that consciously enhance cognitive, educational, and medical capabilities for real-world impact.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {projects.map((project, index) => (
-              <div
-                key={index}
-                className="group relative rounded-3xl bg-[#111111] p-8"
+            {projects.map((project) => (
+              <Link
+                key={project.slug}
+                to={`/projects/${project.slug}`}
+                className="group relative rounded-3xl bg-[#111111] p-8 block"
               >
                 <div className="flex items-start gap-4 mb-8">
                   <div className="p-4 rounded-2xl bg-black">
-                    {project.icon}
+                    <Brain className="h-12 w-12 text-purple-500" />
                   </div>
                   <div className="flex-grow">
                     <h3 className="text-4xl font-bold text-white mb-3">
@@ -45,54 +35,28 @@ export default function ProjectsPage() {
                     </span>
                   </div>
                 </div>
+
                 <p className="text-gray-300 text-xl leading-relaxed mb-8">{project.description}</p>
-                
+
                 <div className="flex gap-4 mb-8">
-                  <a
-                    href={project.link}
-                    className="inline-flex items-center px-6 py-3 rounded-xl bg-black text-white text-lg hover:bg-black/70 transition-colors"
-                  >
-                    Learn More
-                  </a>
+                  {project.link && (
+                    <span className="inline-flex items-center px-6 py-3 rounded-xl bg-black text-white text-lg">
+                      Learn More
+                    </span>
+                  )}
                   {project.demoUrl && (
-                    <a
-                      href={project.demoUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 text-white text-lg hover:bg-blue-700 transition-colors"
-                    >
+                    <span className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 text-white text-lg">
                       Try Demo
                       <ExternalLink className="h-5 w-5" />
-                    </a>
+                    </span>
                   )}
                 </div>
-                
-                {/* Project Images */}
-                {project.imageLayout === 'grid' ? (
-                  <div className="grid grid-cols-3 gap-4">
-                    {project.images.map((image, imageIndex) => (
-                      <div 
-                        key={imageIndex} 
-                        className="aspect-square rounded-2xl overflow-hidden"
-                      >
-                        <img 
-                          src={image} 
-                          alt={`${project.name} preview ${imageIndex + 1}`}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                    ))}
-                  </div>
-                ) : (
-                  <div className="rounded-2xl overflow-hidden h-[500px]">
-                    <img 
-                      src={project.images[0]} 
-                      alt={`${project.name} preview`}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                )}
-              </div>
+
+                {/* Preview area */}
+                <div className="rounded-2xl overflow-hidden h-44 bg-[#0b0b0b] flex items-center justify-center text-gray-500">
+                  <span>Preview</span>
+                </div>
+              </Link>
             ))}
           </div>
         </div>

@@ -1,44 +1,35 @@
-import React from 'react';
+// React import not required with new JSX transform
 import Layout from './components/Layout';
 import Hero from './components/Hero';
 import AboutPage from './pages/AboutPage';
 import ProjectsPage from './pages/ProjectsPage';
+import ProjectPage from './pages/ProjectPage';
 import ResearchPage from './pages/ResearchPage';
 import ContactPage from './pages/ContactPage';
+import BlogIndex from './pages/BlogIndex';
+import BlogPostPage from './pages/BlogPostPage';
+import AuthorPage from './pages/AuthorPage';
 
-// Simple router based on pathname
-function getPage() {
-  const path = window.location.pathname;
-  
-  const PageComponent = (() => {
-    switch (path) {
-      case '/':
-        return Hero;
-      case '/about':
-        return AboutPage;
-      case '/projects':
-        return ProjectsPage;
-      case '/research':
-        return ResearchPage;
-      case '/contact':
-        return ContactPage;
-      default:
-        return Hero;
-    }
-  })();
-
-  return (
-    <div key={path} className="page-transition">
-      <PageComponent />
-    </div>
-  );
-}
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <Layout>
-      {getPage()}
-    </Layout>
+    <BrowserRouter>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Hero />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/projects/:slug" element={<ProjectPage />} />
+          <Route path="/blog" element={<BlogIndex />} />
+          <Route path="/blog/:slug" element={<BlogPostPage />} />
+          <Route path="/author/:name" element={<AuthorPage />} />
+          <Route path="/research" element={<ResearchPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="*" element={<Hero />} />
+        </Routes>
+      </Layout>
+    </BrowserRouter>
   );
 }
 

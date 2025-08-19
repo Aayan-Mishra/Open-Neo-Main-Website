@@ -1,10 +1,10 @@
-import React from 'react';
+// React import not required with new JSX transform
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
 
 const blogs = [
   {
-    title: "The Evolution of OdysseyXL: A Journey Through Innovation",
-    excerpt: "Discover the technical breakthroughs and challenges we faced while developing OdysseyXL, our state-of-the-art text-to-image model.",
+  title: "The Evolution of OdysseyXL: A Journey Through Responsible Innovation",
+  excerpt: "Discover the technical breakthroughs and design decisions behind OdysseyXL and how we shape models to augment human creativity responsibly.",
     date: "March 15, 2025",
     readTime: "8 min read",
     image: "/blog/odyssey-evolution.jpg",
@@ -16,8 +16,8 @@ const blogs = [
     slug: "evolution-of-odysseyxl"
   },
   {
-    title: "Hercules-3: Pushing the Boundaries of Language Models",
-    excerpt: "An in-depth look at how Hercules-3 is revolutionizing the way we approach natural language processing and generation.",
+  title: "Hercules-3: Towards Better Cognitive Assistants",
+  excerpt: "An in-depth look at how Hercules-3 advances reliable language understanding to support education and research workflows.",
     date: "March 10, 2025",
     readTime: "6 min read",
     image: "/blog/hercules-boundaries.jpg",
@@ -29,8 +29,8 @@ const blogs = [
     slug: "hercules-3-boundaries"
   },
   {
-    title: "The Future of AI: Our Vision at Odyssey Labs",
-    excerpt: "Exploring our perspective on where AI is headed and how we're positioning ourselves to lead the way in innovation.",
+  title: "The Future of Human Capability: Our Vision",
+  excerpt: "Exploring our perspective on how research and tools can consciously elevate learning, cognition, and healthcare.",
     date: "March 5, 2025",
     readTime: "10 min read",
     image: "/blog/future-ai-vision.jpg",

@@ -76,6 +76,8 @@ export default function AboutPage() {
     }
     return contact;
   };
+  // Toggle to hide/show Team section during edits. Set to false to hide temporarily.
+  const showTeam = false;
 
   return (
     <div className="min-h-screen pt-20">
@@ -84,9 +86,14 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl font-bold mb-6">About Noema Research</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            We are a collective of researchers, engineers, and innovators 
-            advancing human evolution through artificial intelligence, education, and transformative research.
+            We are a collective of researchers, engineers, and innovators focused on consciously enhancing human cognitive, educational, and medical capabilities through rigorous research and responsible translation.
           </p>
+          <div className="mt-8 max-w-3xl mx-auto text-left prose prose-invert text-gray-200">
+            <h3 className="text-lg font-semibold">Our Philosophy</h3>
+            <p>
+              We believe that the next great leap in human evolution will come not from biological adaptation, but from the conscious enhancement of our cognitive, educational, and medical capabilities.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -153,67 +160,69 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="py-20 px-4 bg-black/40">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold mb-12 text-center">Our Team</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
-              <div 
-                key={index} 
-                className={`p-6 bg-black/20 rounded-xl border border-white/10 transition-all duration-300 ${member.hoverEffect}`}
-              >
-                <div className="mb-6">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-32 h-32 rounded-full mx-auto object-cover"
-                  />
-                </div>
-                <div className="text-center">
-                  <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                  <p className="text-blue-400 mb-4">{member.role}</p>
-                  <div className="flex justify-center gap-4">
-                    {member.social.github && (
-                      <a 
-                        href={member.social.github} 
-                        className="text-gray-400 hover:text-white transition-colors"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`${member.name}'s GitHub`}
-                      >
-                        <Github className="h-5 w-5" />
-                      </a>
-                    )}
-                    {member.social.x && (
-                      <a 
-                        href={member.social.x}
-                        className="text-gray-400 hover:text-white transition-colors"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`${member.name}'s X (Twitter)`}
-                      >
-                        <Twitter className="h-5 w-5" />
-                      </a>
-                    )}
-                    {member.social.contact && (
-                      <a 
-                        href={getContactHref(member.social.contact)}
-                        className="text-gray-400 hover:text-white transition-colors"
-                        target={isEmail(member.social.contact) ? undefined : '_blank'}
-                        rel={isEmail(member.social.contact) ? undefined : 'noopener noreferrer'}
-                        aria-label={`Contact ${member.name}`}
-                      >
-                        <Mail className="h-5 w-5" />
-                      </a>
-                    )}
+      {/* Team Section (hidden when showTeam is false) */}
+      {showTeam && (
+        <section className="py-20 px-4 bg-black/40">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold mb-12 text-center">Our Team</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {teamMembers.map((member, index) => (
+                <div 
+                  key={index} 
+                  className={`p-6 bg-black/20 rounded-xl border border-white/10 transition-all duration-300 ${member.hoverEffect}`}
+                >
+                  <div className="mb-6">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-32 h-32 rounded-full mx-auto object-cover"
+                    />
+                  </div>
+                  <div className="text-center">
+                    <h3 className="text-xl font-bold mb-1">{member.name}</h3>
+                    <p className="text-blue-400 mb-4">{member.role}</p>
+                    <div className="flex justify-center gap-4">
+                      {member.social.github && (
+                        <a 
+                          href={member.social.github} 
+                          className="text-gray-400 hover:text-white transition-colors"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`${member.name}'s GitHub`}
+                        >
+                          <Github className="h-5 w-5" />
+                        </a>
+                      )}
+                      {member.social.x && (
+                        <a 
+                          href={member.social.x}
+                          className="text-gray-400 hover:text-white transition-colors"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`${member.name}'s X (Twitter)`}
+                        >
+                          <Twitter className="h-5 w-5" />
+                        </a>
+                      )}
+                      {member.social.contact && (
+                        <a 
+                          href={getContactHref(member.social.contact)}
+                          className="text-gray-400 hover:text-white transition-colors"
+                          target={isEmail(member.social.contact) ? undefined : '_blank'}
+                          rel={isEmail(member.social.contact) ? undefined : 'noopener noreferrer'}
+                          aria-label={`Contact ${member.name}`}
+                        >
+                          <Mail className="h-5 w-5" />
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
     </div>
   );
 }

@@ -56,14 +56,11 @@ export default function Hero() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="space-y-8">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
-            Revolutionizing the{' '}
-            <span className="animate-gradient bg-gradient-to-r from-red-500 via-yellow-500 via-green-500 via-blue-500 via-indigo-500 to-purple-500 bg-[size:200%] text-transparent bg-clip-text">
-              Future of Humanity
-            </span>
+            Enhancing <span className="animate-gradient bg-gradient-to-r from-red-500 via-yellow-500 via-green-500 via-blue-500 via-indigo-500 to-purple-500 bg-[size:200%] text-transparent bg-clip-text">Human Capability</span> for the <span className="animate-gradient bg-gradient-to-r from-red-500 via-yellow-500 via-green-500 via-blue-500 via-indigo-500 to-purple-500 bg-[size:200%] text-transparent bg-clip-text">Next Leap</span>
           </h1>
           
           <p className="text-xl text-gray-300 max-w-2xl">
-            Advancing the frontiers of human knowledge through pioneering research and transformative innovation
+            We believe the next great leap in human evolution will come from the conscious enhancement of our cognitive, educational, and medical capabilities — through rigorous research, open tools, and responsible translation.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4">
