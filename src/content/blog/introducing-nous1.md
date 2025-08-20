@@ -90,7 +90,7 @@ Reasoning (thinking) mode example:
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
 
-model_name = "apexion-ai/Nous-1-2B"
+model_name = "NoemaResearch/Nous-1-4B"
 
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(

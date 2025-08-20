@@ -50,11 +50,11 @@ The Nous family is accompanied by documentation, model cards, and example deploy
     releaseDate: '2025-06-10',
     tags: ['open-model', 'reasoning', 'agents', 'chat'],
     metrics: [
-      { name: 'Params', value: '3B / 7B / 13B / 70B' },
+      { name: 'Params', value: '2B / 4B / 8B' },
       { name: 'Latency', value: '50–300ms (depending on variant & hardware)' }
     ],
     authors: [
-      { name: 'Aayan Mishra', role: 'Founder, Noema Research', avatar: '/team/191959356.png', profile: 'https://aayanmishra.com' }
+      { name: 'Aayan Mishra', role: 'Founder, Noema Research', avatar: 'https://avatars.githubusercontent.com/u/176997922?s=400&u=1d5678bbadc68b20b829f64106c8074475a03e7b&v=4', profile: 'https://aayanmishra.com' }
     ],
     images: [
       '/projects/odyssey/odysseyxl.png',
@@ -102,7 +102,7 @@ Source: public content from https://victor.aayanmishra.com/ (metadata and featur
       { name: 'Rating', value: '4.9★' }
     ],
     authors: [
-      { name: 'Aayan Mishra', role: 'Founder, Noema Research', avatar: '/team/191959356.png', profile: 'https://aayanmishra.com' }
+      { name: 'Aayan Mishra', role: 'Founder, Noema Research', avatar: 'https://avatars.githubusercontent.com/u/176997922?s=400&u=1d5678bbadc68b20b829f64106c8074475a03e7b&v=4', profile: 'https://aayanmishra.com' }
     ],
     images: [
       '/projects/victor/victor-light.svg'

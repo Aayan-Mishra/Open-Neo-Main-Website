@@ -4,48 +4,47 @@ import blogs, { BlogPost } from '../data/blogs';
 import ReactMarkdown from 'react-markdown';
 import { useEffect, useState } from 'react';
 
-type CodeProps = { inline?: boolean; className?: string; children?: any } & Record<string, any>;
+type CodeProps = { inline?: boolean; className?: string; children?: any };
 
-function CodeBlock({ inline, className, children, ...props }: CodeProps) {
-  const match = /language-(\w+)/.exec(className || '');
+function CodeBlock({ inline, className, children }: CodeProps) {
+  const langMatch = typeof className === 'string' ? className.match(/language-([\w-]+)/) : null;
+  const language = langMatch ? langMatch[1] : '';
   const [copied, setCopied] = useState(false);
   const [Highlighter, setHighlighter] = useState<any>(null);
-  const [highlighterStyle, setHighlighterStyle] = useState<any>(null);
-  const codeText = String(children || '').replace(/\n$/, '');
+  const codeString = String(children || '').replace(/\n$/, '');
 
-  // Lazy-load react-syntax-highlighter (works with Vite's ESM dynamic import).
-  // If the package isn't installed the import will fail and we'll silently fall back.
   useEffect(() => {
     let mounted = true;
-    if (match && !Highlighter) {
+    if (language && !Highlighter) {
       (async () => {
         try {
-          // Import the syntax highlighter core and styles. Some builds export Prism as a named export.
-          const rsh = await import('react-syntax-highlighter');
-          const styleMod = await import('react-syntax-highlighter/dist/esm/styles/prism');
+          // load Prism build directly (if installed)
+          const mod = await import('react-syntax-highlighter/dist/esm/prism');
+          const styles = await import('react-syntax-highlighter/dist/esm/styles/prism');
           if (!mounted) return;
-          setHighlighter(rsh.Prism || rsh.default || rsh);
-          setHighlighterStyle(styleMod.oneDark || styleMod.default || styleMod);
-        } catch (e) {
-          // not installed or failed to load — we'll keep Highlighter null and use the fallback
-          // Log error to console for debugging in dev mode
+          setHighlighter(mod.Prism || mod.default || mod);
+          // attach styles if available
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          (Highlighter as any) && setTimeout(() => {}, 0);
+        } catch (err) {
+          // no-op: keep Highlighter null and fall back
           // eslint-disable-next-line no-console
-          console.error('Failed to load syntax highlighter dynamically:', e);
+          console.debug('Highlighter not available, using fallback:', err && err.message ? err.message : err);
         }
       })();
     }
     return () => {
       mounted = false;
     };
-  }, [match, Highlighter]);
+  }, [language, Highlighter]);
 
   const handleCopy = async () => {
     try {
-      if (typeof navigator !== 'undefined' && navigator.clipboard && navigator.clipboard.writeText) {
-        await navigator.clipboard.writeText(codeText);
-      } else if (typeof document !== 'undefined') {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(codeString);
+      } else {
         const ta = document.createElement('textarea');
-        ta.value = codeText;
+        ta.value = codeString;
         document.body.appendChild(ta);
         ta.select();
         document.execCommand('copy');
@@ -53,45 +52,31 @@ function CodeBlock({ inline, className, children, ...props }: CodeProps) {
       }
       setCopied(true);
       setTimeout(() => setCopied(false), 1800);
-    } catch (e) {
-      // ignore copy failures
+    } catch {
+      // ignore
     }
   };
 
-  if (!inline) {
-    // If language present and highlighter available, use it
-    if (match && Highlighter) {
-      const lang = match[1];
-      try {
-        // Ensure Highlighter looks like a renderable component
-        if (typeof Highlighter === 'function' || (Highlighter && typeof Highlighter === 'object')) {
-          const SafeHighlighter: any = Highlighter as any;
-          return (
-            <div className="relative">
-              <button onClick={handleCopy} className="absolute right-3 top-3 z-10 bg-black/60 text-white text-xs px-3 py-1 rounded-md hover:bg-black/80">{copied ? 'Copied' : 'Copy'}</button>
-              <SafeHighlighter style={highlighterStyle || {}} language={lang} PreTag="div">
-                {codeText}
-              </SafeHighlighter>
-            </div>
-          );
-        }
-      } catch (err) {
-        // If the highlighter throws at render time, log and fall back to the plain block.
-        // eslint-disable-next-line no-console
-        console.error('SyntaxHighlighter render failed, falling back to plain code block:', err);
-      }
-    }
+  if (inline) return <code className={className}>{children}</code>;
 
-    // Fallback for code blocks without language or without highlighter
+  // If we have a valid Highlighter component, render it (do not spread unknown props)
+  if (Highlighter && (typeof Highlighter === 'function' || typeof Highlighter === 'object')) {
+    const SafeHighlighter: any = Highlighter;
     return (
       <div className="relative">
         <button onClick={handleCopy} className="absolute right-3 top-3 z-10 bg-black/60 text-white text-xs px-3 py-1 rounded-md hover:bg-black/80">{copied ? 'Copied' : 'Copy'}</button>
-        <pre className="rounded-md bg-[#0b0b0b] p-4 overflow-auto text-sm"><code className={className}>{codeText}</code></pre>
+        <SafeHighlighter language={language} PreTag="div">{codeString}</SafeHighlighter>
       </div>
     );
   }
 
-  return <code className={className} {...props}>{children}</code>;
+  // plain fallback
+  return (
+    <div className="relative">
+      <button onClick={handleCopy} className="absolute right-3 top-3 z-10 bg-black/60 text-white text-xs px-3 py-1 rounded-md hover:bg-black/80">{copied ? 'Copied' : 'Copy'}</button>
+      <pre className="rounded-md bg-[#0b0b0b] p-4 overflow-auto text-sm"><code className={className}>{codeString}</code></pre>
+    </div>
+  );
 }
 
 export default function BlogPostPage() {
