@@ -7,36 +7,8 @@ import { useEffect, useState } from 'react';
 type CodeProps = { inline?: boolean; className?: string; children?: any };
 
 function CodeBlock({ inline, className, children }: CodeProps) {
-  const langMatch = typeof className === 'string' ? className.match(/language-([\w-]+)/) : null;
-  const language = langMatch ? langMatch[1] : '';
-  const [copied, setCopied] = useState(false);
-  const [Highlighter, setHighlighter] = useState<any>(null);
   const codeString = String(children || '').replace(/\n$/, '');
-
-  useEffect(() => {
-    let mounted = true;
-    if (language && !Highlighter) {
-      (async () => {
-        try {
-          // load Prism build directly (if installed)
-          const mod = await import('react-syntax-highlighter/dist/esm/prism');
-          const styles = await import('react-syntax-highlighter/dist/esm/styles/prism');
-          if (!mounted) return;
-          setHighlighter(mod.Prism || mod.default || mod);
-          // attach styles if available
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          (Highlighter as any) && setTimeout(() => {}, 0);
-        } catch (err) {
-          // no-op: keep Highlighter null and fall back
-          // eslint-disable-next-line no-console
-          console.debug('Highlighter not available, using fallback:', err && err.message ? err.message : err);
-        }
-      })();
-    }
-    return () => {
-      mounted = false;
-    };
-  }, [language, Highlighter]);
+  const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
     try {
@@ -59,18 +31,7 @@ function CodeBlock({ inline, className, children }: CodeProps) {
 
   if (inline) return <code className={className}>{children}</code>;
 
-  // If we have a valid Highlighter component, render it (do not spread unknown props)
-  if (Highlighter && (typeof Highlighter === 'function' || typeof Highlighter === 'object')) {
-    const SafeHighlighter: any = Highlighter;
-    return (
-      <div className="relative">
-        <button onClick={handleCopy} className="absolute right-3 top-3 z-10 bg-black/60 text-white text-xs px-3 py-1 rounded-md hover:bg-black/80">{copied ? 'Copied' : 'Copy'}</button>
-        <SafeHighlighter language={language} PreTag="div">{codeString}</SafeHighlighter>
-      </div>
-    );
-  }
-
-  // plain fallback
+  // Hotfix: always render a safe fallback block (no dynamic imports) to avoid runtime errors in production.
   return (
     <div className="relative">
       <button onClick={handleCopy} className="absolute right-3 top-3 z-10 bg-black/60 text-white text-xs px-3 py-1 rounded-md hover:bg-black/80">{copied ? 'Copied' : 'Copy'}</button>
